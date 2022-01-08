@@ -1,0 +1,17 @@
+---
+application:
+  name: "nodejsdiscordbot"
+  project: "InterJK2Bot"
+  organization: "QoveryCommunity"
+  ram: 1GB
+  cpu: 1
+databases:
+- type: "MYSQL"
+  name: "jk2"
+  version: "8"
+routers:
+- name: "main-nodejsdiscordbot"
+  routes:
+  - application_name: "nodejsdiscordbot"
+    paths:
+    - "/*"

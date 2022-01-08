@@ -1,1 +1,1 @@
-# JK2DiscordBot
+# NodeJSDiscordBot
