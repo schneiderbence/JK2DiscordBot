@@ -3,7 +3,16 @@ require('events').EventEmitter.prototype._maxListeners = 100;
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const commandSend = require('./commands.js');
-//const config = require('./config.json');
+const { createConnection } = require('mysql');
+const config = require('./config.json');
+
+let con = createConnection(config.mysql);
+
+con.connect(err => {
+    if (err) return console.log(err);
+    console.log(`MySQL has been connected!`);
+});
+
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
